@@ -84,8 +84,8 @@ export default function About() {
   return (
     <section id="about" className="bg-zinc-900 text-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 border-l-4 border-yellow-400 pl-4">
-          OUR <span className="text-yellow-400">OUTLETS</span>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 border-l-4 border-yellow-500/80 pl-4">
+          OUR <span className="text-yellow-500/80">OUTLETS</span>
         </h2>
 
         <p className="text-lg md:text-xl leading-relaxed text-gray-100 mb-4">

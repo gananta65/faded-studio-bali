@@ -1,3 +1,4 @@
+// Hero.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -38,7 +39,7 @@ export default function Hero() {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Slideshow background with next/image */}
+      {/* Background Slideshow */}
       {images.map((img, index) => (
         <div
           key={index}
@@ -59,30 +60,31 @@ export default function Hero() {
       {/* Overlay gradasi */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30 z-10" />
 
-      {/* Konten utama */}
+      {/* Konten */}
       <div className="relative z-20 flex flex-col justify-center h-full px-6 md:pl-24 text-left">
         <div className="mb-6 drop-shadow-lg">
           <div className="text-6xl md:text-8xl font-extrabold text-white">
             FADED
           </div>
-          <div className="text-6xl md:text-8xl font-semibold text-yellow-400 mt-1 ml-1">
+          <div className="text-6xl md:text-8xl font-semibold text-gray-300 mt-1 ml-1">
             STUDIO BALI
           </div>
         </div>
 
-        <p className="text-xl md:text-3xl text-gray-200 max-w-2xl mb-8 drop-shadow-md">
-          Stay <span className="text-yellow-400 font-semibold">sharp</span>,
-          stay <span className="text-yellow-400 font-semibold">fresh</span>.
-          <br />
-          Premium cuts for modern men.
+        <p className="text-base md:text-xl text-white max-w-2xl mb-8 drop-shadow-md leading-relaxed text-justify">
+          From a Pair of Clippers in High School to Faded Studio Bali — Built
+          from Struggle, Sharpened by Experience. Since 2016, we’ve mastered
+          every style and every story behind the chair. <br />
+          Founded in 2022 to not only cut hair, but to uplift the next
+          generation of young men chasing purpose through skill.
         </p>
 
-        <div className="w-fit">
+        <div className="w-fit mx-auto md:mx-0 text-center md:text-left">
           <a
             href="https://wa.me/6282359489726"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-500 text-black font-medium text-base py-2 px-4 rounded-lg shadow hover:bg-gray-200 transition"
+            className="inline-block bg-gray-300 text-black font-medium text-base py-2 px-4 rounded-lg shadow hover:bg-gray-200 transition"
           >
             Book via WhatsApp
           </a>

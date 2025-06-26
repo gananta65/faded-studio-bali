@@ -18,7 +18,7 @@ export default function Gallery() {
       className="bg-zinc-900 text-white py-16 px-6 md:px-20"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-10 border-l-4 border-yellow-400 pl-4 text-left">
+        <h2 className="text-3xl md:text-5xl font-bold mb-10 border-l-4 border-yellow-500/80 pl-4 text-left">
           Galleries
         </h2>
 
