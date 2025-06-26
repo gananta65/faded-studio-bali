@@ -8,7 +8,11 @@ export default function Footer() {
             Faded Studio Bali
           </h2>
           <p className="text-sm text-gray-400">
-            Stay sharp, stay fresh. Premium cuts for modern men.
+            From a Pair of Clippers in High School to Faded Studio Bali — Built
+            from Struggle, Sharpened by Experience. Since 2016, we’ve mastered
+            every style and every story behind the chair. <br />
+            Founded in 2022 to not only cut hair, but to uplift the next
+            generation of young men chasing purpose through skill.
           </p>
         </div>
 
