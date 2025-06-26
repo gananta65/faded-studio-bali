@@ -23,6 +23,59 @@ const outlets = [
   },
 ];
 
+const testimonialsByOutlet: Record<
+  string,
+  { name: string; feedback: string }[]
+> = {
+  Pererenan: [
+    {
+      name: "Natasha Ishaq",
+      feedback:
+        "Absolutely fantastic service! The attention to detail and skill is complete perfection. Thank you for taking care of my son, he was delighted with his hair!!",
+    },
+    {
+      name: "Lee Smith",
+      feedback:
+        "Best barbershop in Bali. Always do an amazing job with my afro hair type.",
+    },
+    {
+      name: "Danny Cellar",
+      feedback: "Walk-in good barber shop with great coffee. Friendly staff.",
+    },
+  ],
+  Munggu: [
+    {
+      name: "Jordan",
+      feedback:
+        "Came in for a perm and haircut, couldn&rsquo;t be happier. Cheap price, very good barbers!",
+    },
+    {
+      name: "Pablo Sanchez",
+      feedback: "Really happy with the cut. Desmond nailed the details!",
+    },
+    {
+      name: "Johnny Hamilton",
+      feedback:
+        "Awesome service, great cut, and very reasonable price. Will definitely be back!",
+    },
+  ],
+};
+
+function TestimonialCard({
+  name,
+  feedback,
+}: {
+  name: string;
+  feedback: string;
+}) {
+  return (
+    <div className="bg-zinc-800 text-white rounded-xl p-6 shadow-md hover:shadow-yellow-500/30 transition flex flex-col justify-between h-full">
+      <p className="text-gray-100 text-lg italic mb-4">“{feedback}”</p>
+      <p className="font-semibold text-yellow-400 mt-auto">— {name}</p>
+    </div>
+  );
+}
+
 export default function About() {
   const [selectedOutlet, setSelectedOutlet] = useState<
     null | (typeof outlets)[0]
@@ -30,22 +83,18 @@ export default function About() {
 
   return (
     <section id="about" className="bg-zinc-900 text-white py-16 px-6 md:px-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 border-l-4 border-yellow-400 pl-4">
           OUR <span className="text-yellow-400">OUTLETS</span>
         </h2>
 
         <p className="text-lg md:text-xl leading-relaxed text-gray-100 mb-4">
           <b>Faded Studio Bali</b> isn&rsquo;t just a barbershop — it&rsquo;s a
-          place where style meets precision. Founded by passionate
-          professionals, we&rsquo;ve served the community with top-tier grooming
-          services since 2020.
+          place where style meets precision.
         </p>
         <p className="text-lg md:text-xl leading-relaxed text-gray-100">
-          Whether you&rsquo;re looking for a clean fade, a classic cut, or a
-          sharp beard line, our experienced barbers are ready to make it happen.
-          With a cozy atmosphere and modern style, you&rsquo;re always in good
-          hands.
+          Whether you&rsquo;re looking for a clean fade, classic cut, or sharp
+          beard line — you&rsquo;re in good hands.
         </p>
 
         <p className="text-sm text-gray-400 mt-8 mb-2">
@@ -103,16 +152,16 @@ export default function About() {
           ))}
         </div>
 
-        {/* Map detail */}
         {selectedOutlet && (
           <div
             id="map-section"
             className="mt-16 bg-zinc-800 p-6 rounded-xl shadow-xl"
           >
             <h3 className="text-2xl font-bold text-yellow-400 mb-4">
-              {selectedOutlet.name} Location & Reviews
+              {selectedOutlet.name} Location & Testimonials
             </h3>
-            <div className="aspect-video w-full overflow-hidden rounded-lg mb-4">
+
+            <div className="aspect-video w-full overflow-hidden rounded-lg mb-6">
               <iframe
                 src={selectedOutlet.mapEmbedUrl}
                 width="100%"
@@ -123,14 +172,21 @@ export default function About() {
                 className="w-full h-full border-0"
               />
             </div>
-            <div className="flex items-center gap-4">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {testimonialsByOutlet[selectedOutlet.name]?.map((t, i) => (
+                <TestimonialCard key={i} name={t.name} feedback={t.feedback} />
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 mt-6">
               <a
                 href={selectedOutlet.mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-sm bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-300"
+                className="inline-block text-sm bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-300 transition"
               >
-                View on Google Maps
+                View More on Maps
               </a>
               <button
                 onClick={() => setSelectedOutlet(null)}
