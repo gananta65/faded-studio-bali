@@ -47,7 +47,7 @@ const testimonialsByOutlet: Record<
     {
       name: "Jordan",
       feedback:
-        "Came in for a perm and haircut, couldn&rsquo;t be happier. Cheap price, very good barbers!",
+        "Came in for a perm and haircut, couldn't be happier. Cheap price, very good barbers!",
     },
     {
       name: "Pablo Sanchez",
