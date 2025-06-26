@@ -48,9 +48,11 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
           <ul className="space-y-2 text-sm">
-            <li>📍 Jl. Raya Semer No.12, Badung</li>
-            <li>📍 Jl. Teuku Umar No.101, Denpasar</li>
-            <li>⏰ Open Daily: 10 AM – 9 PM</li>
+            <li>📍 Jl. Sempol, Pererenan, Kec. Mengwi, Kabupaten Badung</li>
+            <li>
+              📍 Jl. Pantai Munggu, Munggu, Kec. Mengwi, Kabupaten Badung.
+            </li>
+            <li>⏰ Open Daily: 9 AM – 7 PM</li>
             <li>
               📞 WhatsApp:{" "}
               <a
