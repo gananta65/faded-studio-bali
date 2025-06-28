@@ -81,12 +81,12 @@ export default function Hero() {
 
         <div className="w-fit mx-auto md:mx-0 text-center md:text-left">
           <a
-            href="https://wa.me/6282359489726"
+            href="https://www.fresha.com/id/book-now/barber-test-qw5lmbgk/all-offer?share&pId=2585131"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gray-300 text-black font-medium text-base py-2 px-4 rounded-lg shadow hover:bg-gray-200 transition"
+            className="inline-block bg-gray-300 text-black font-medium text-base py-2 px-6 rounded-full shadow hover:bg-gray-200 transition"
           >
-            Book via WhatsApp
+            Book Now
           </a>
         </div>
       </div>

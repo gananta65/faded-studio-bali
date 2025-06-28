@@ -8,6 +8,8 @@ const outlets = [
     address: "Jl. Sempol, Pererenan, Kec. Mengwi, Kabupaten Badung.",
     hours: "Open Daily: 9 AM – 7 PM",
     mapsLink: "https://maps.app.goo.gl/H7DtkmtF8FXt6xyH8",
+    bookingLink:
+      "https://www.fresha.com/id/book-now/barber-test-qw5lmbgk/all-offer?id=2670529&share&pId=2585131", // Ganti dengan URL asli
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.5315997603116!2d115.13203859999999!3d-8.640883600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2395aefc89d47%3A0x3050af4f1bbd03c1!2sFaded%20studio%20Bali!5e0!3m2!1sid!2sid!4v1750832078994!5m2!1sid!2sid",
     image: "/barber/photo (9).jpg",
@@ -17,6 +19,8 @@ const outlets = [
     address: "Jl. Pantai Munggu, Munggu, Kec. Mengwi, Kabupaten Badung.",
     hours: "Open Daily: 9 AM – 7 PM",
     mapsLink: "https://maps.app.goo.gl/vF92bNhx2EfHX8aK9",
+    bookingLink:
+      "https://www.fresha.com/id/book-now/barber-test-qw5lmbgk/all-offer?id=2671516&share&pId=2585131", // Ganti dengan URL asli
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.5035905312748!2d115.1185502!3d-8.6435604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23900632acd67%3A0xff57ca7488262a5b!2sFaded%20Studio%20Bali!5e0!3m2!1sid!2sid!4v1750832160107!5m2!1sid!2sid",
     image: "/barber/photo (8).jpg",
@@ -139,7 +143,7 @@ export default function About() {
                   </button>
 
                   <a
-                    href="https://wa.me/6282359489726"
+                    href={outlet.bookingLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border border-white text-white py-2 px-4 rounded-lg font-medium hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition"
