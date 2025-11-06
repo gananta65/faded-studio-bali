@@ -1,6 +1,7 @@
 // app/layout.tsx
 import "@/styles/globals.css";
 import { Navbar, Footer, WAButton } from "@/components";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "#1 BARBER IN CANGGU",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <Toaster position="top-center" />
         <Footer />
         <WAButton />
       </body>

@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 const images = [
   "/barber/gallery/photo (3).webp",
@@ -30,6 +31,18 @@ export default function Hero() {
 
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleClick = () => {
+    toast("Please choose a place to book", {
+      style: {
+        background: "rgba(255, 255, 255, 0.9)", // putih semi-transparan
+        color: "#222", // teks hitam
+        border: "1px solid rgba(0,0,0,0.1)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+        backdropFilter: "blur(8px)", // efek glass
+      },
+    });
   };
 
   return (
@@ -81,8 +94,8 @@ export default function Hero() {
 
         <div className="w-fit mx-auto md:mx-0 text-center md:text-left">
           <a
-            href="https://www.fresha.com/id/book-now/barber-test-qw5lmbgk/all-offer?share&pId=2585131"
-            target="_blank"
+            onClick={handleClick}
+            href="#about"
             rel="noopener noreferrer"
             className="inline-block bg-gray-300 text-black font-medium text-base py-2 px-6 rounded-full shadow hover:bg-gray-200 transition"
           >
