@@ -3,37 +3,41 @@ export default function Pricing() {
     {
       title: "HAIRCUT",
       items: [
-        { title: "LINE UP ONLY", price: "50K" },
-        { title: "ZERO TRIM ONLY", price: "100K" },
-        { title: "HEAD SHAVE", price: "150K" },
-        { title: "HAIR CUT", price: "150K" },
+        { title: "LINE UP ONLY", price: "" },
+        { title: "ZERO TRIM ONLY", price: "" },
+        { title: "HEAD SHAVE", price: "" },
+        { title: "HAIR CUT", price: "" },
       ],
     },
     {
       title: "BEARD",
       items: [
-        { title: "BEARD TRIM", price: "80K" },
-        { title: "HOT TOWEL SHAVE", price: "130K" },
-        { title: "PERM BEARD COLORING", price: "Start from 300K" },
+        { title: "BEARD TRIM", price: "" },
+        { title: "HOT TOWEL SHAVE", price: "" },
+        { title: "PERM BEARD COLORING", price: "" },
       ],
     },
     {
       title: "HAIR TREATMENT",
       items: [
-        { title: "HAIR WASH ONLY", price: "50K" },
-        { title: "HAIR ART DESIGN", price: "250K" },
-        { title: "COMBO 1 (HAIRCUT + FULL SHAVE)", price: "250K" },
-        { title: "COMBO 2 (HAIRCUT + BEARD TRIM)", price: "230K" },
-        { title: "PERM CURL", price: "850K" },
-        { title: "CONROW", price: "Start from 500K" },
-        { title: "HAIR COLORING", price: "Start from 800K" },
-      ],
+          { title: "COMBO 1 (HAIRCUT + FULL SHAVE)", price: "" },
+          { title: "COMBO 2 (HAIRCUT + BEARD TRIM)", price: "" },
+          { title: "CONROW", price: "" },
+          { title: "EAR WAX", price: "" },
+          { title: "HAIR ART DESIGN", price: "" },
+          { title: "HAIR COLORING", price: "" },
+          { title: "HAIR LIGHT", price: "" },
+          { title: "HAIR WASH ONLY", price: "" },
+          { title: "LOSE PERM", price: "" },
+          { title: "NOSE WAX", price: "" },
+          { title: "PERM CURL", price: "" }
+      ]
     },
     {
       title: "MERCHANDISE",
       items: [
-        { title: "T-SHIRT", price: "200K" },
-        { title: "SHIRT", price: "350K" },
+        { title: "T-SHIRT", price: "" },
+        { title: "SHIRT", price: "" },
       ],
     },
   ];
@@ -51,7 +55,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {sections.map((section, idx) => (
             <div key={idx} className="flex flex-col">
-              <div className="border-b border-white/10 pb-2 mb-4">
+              <div className="border-b border-white/100 pb-2 mb-4">
                 <h3 className="text-lg font-bold uppercase tracking-wide">
                   {section.title}
                 </h3>
@@ -60,7 +64,7 @@ export default function Pricing() {
                 {section.items.map((item, index) => (
                   <div
                     key={index}
-                    className="flex justify-between items-center px-4 py-2 rounded transition duration-200 hover:brightness-110"
+                    className="flex justify-between items-center px-4 py-1 rounded transition duration-200 hover:brightness-110"
                   >
                     <span className="text-sm md:text-base font-medium uppercase tracking-wide text-left">
                       {item.title}
