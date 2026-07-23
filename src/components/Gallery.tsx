@@ -9,8 +9,6 @@ const galleryImages = [
   "/barber/gallery/photo (4).webp",
   "/barber/gallery/photo (5).webp",
   "/barber/gallery/photo (6).webp",
-  "/barber/gallery/photo (7).webp",
-  "/barber/gallery/photo (8).webp",
 ];
 
 export default function Gallery() {
